@@ -13,9 +13,9 @@ if (!class_exists('PHPUnit_Framework_TestCase') /*|| (float) PHPUnit_Runner_Vers
 	}
 }
 
-require_once __DIR__ . '/../lib/nette/Nette/loader.php';
+require_once __DIR__ . '/../libs/nette/Nette/loader.php';
 
 $loader = new \Nette\Loaders\RobotLoader();
-$loader->addDirectory(__DIR__ . '/../eskymo/');
+$loader->addDirectory(__DIR__ . '/../eskymotools/');
 $loader->addDirectory(__DIR__);
 $loader->register();

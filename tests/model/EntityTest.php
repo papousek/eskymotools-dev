@@ -28,17 +28,17 @@ class EntityTest extends \eskymo\tests\TestCase
 			$entity->aaaa;
 			$this->fail("Access to a not defined property should be forbidden.");
 		}
-		catch(\MemberAccessException $e) {}
+		catch(\Nette\MemberAccessException $e) {}
 		try {
 			$entity->aaaa = 1;
 			$this->fail("Access to a not defined property should be forbidden.");
 		}
-		catch(\MemberAccessException $e) {}
+		catch(\Nette\MemberAccessException $e) {}
 		try {
 			$entity->readAttribute = 1;
 			$this->fail("Write access to an only-read property should be forbidden.");
 		}
-		catch(\MemberAccessException $e) {}
+		catch(\Nette\MemberAccessException $e) {}
 		try {
 			$entity->readAttribute;
 		}
