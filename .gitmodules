@@ -1,0 +1,9 @@
+[submodule "libs/dibi"]
+	path = libs/dibi
+	url = https://github.com/dg/dibi.git
+[submodule "libs/nette"]
+	path = libs/nette
+	url = https://github.com/nette/nette
+[submodule "eskymotools"]
+	path = eskymotools
+	url = git@github.com:papousek/eskymotools.git
