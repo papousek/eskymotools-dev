@@ -2,6 +2,16 @@
 class FileTest extends \eskymo\tests\TestCase
 {
 
+	public function testCanRead() {
+		$file = new \eskymo\io\File(__DIR__ . '/test-environment/file');
+		$this->assertTrue($file->canRead());
+	}
+
+	public function testCanWrite() {
+		$file = new \eskymo\io\File(__DIR__ . '/test-environment/file');
+		$this->assertTrue($file->canWrite());
+	}
+
 	public function testExceptions() {
 		try {
 			new \eskymo\io\File(null);
@@ -78,7 +88,7 @@ class FileTest extends \eskymo\tests\TestCase
 		catch(\Nette\FileNotFoundException $e) {}
 		
 		// existing file/dir
-		$existing = new \eskymo\io\File(__DIR__ . '/file');
+		$existing = new \eskymo\io\File(__DIR__ . '/test-environment/file');
 		try {
 			$existing->copy("");
 		}
